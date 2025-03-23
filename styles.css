@@ -100,15 +100,15 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.header{
-    background-image: url("img/img\ logo\ 2.jpg");
+.header {
+    background-image: url("img/Logo\ interno\ 2.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 
-nav{
+nav {
     position: fixed;
     isolation: isolate;
     top: 0;
@@ -119,7 +119,7 @@ nav{
 
 }
 
-.nav__bar{
+.nav__bar {
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -128,13 +128,13 @@ nav{
     background-color: var(--primary-color);
 }
 
-.nav__menu__btn{
+.nav__menu__btn {
     font-size: 1.5rem;
-    color:var(--white);
+    color: var(--white);
     cursor: pointer;
 }
 
-.nav__links{
+.nav__links {
     list-style: none;
     position: absolute;
     width: 100%;
@@ -142,18 +142,18 @@ nav{
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap:2rem;
-background-color: rgba(132, 199, 229, 0.9 );
-transform: translateY(-100%);
-transition: .5s;
-z-index: -1;
+    gap: 2rem;
+    background-color: rgba(132, 199, 229, 0.9);
+    transform: translateY(-100%);
+    transition: .5s;
+    z-index: -1;
 }
 
-.nav__links.open{
+.nav__links.open {
     transform: translateY(0);
 }
 
-.nav__links a{
+.nav__links a {
     position: relative;
     isolation: isolate;
     padding-bottom: 8px;
@@ -161,6 +161,134 @@ z-index: -1;
     transition: 0.3s;
 }
 
-.nav__btn{
+.nav__btn {
     display: none;
+}
+
+.header__container{
+    padding-block: 10rem 15rem;
+}
+
+.header__container p{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    text-align: center;
+    opacity: 0.6;
+}
+
+.header__container h1{
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.header__container h1 span {
+    color: var(--primary-color);
+}
+
+.booking__container{
+    padding-block: 0;
+}
+
+.booking__form{
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    border-radius: 10px;
+    transform: translateY(-50%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.select__group{
+    flex: 1 1 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.select__group span{
+    font-size: 1.75rem;
+    color: var(--primary-color);
+}
+
+.select__group label{
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.select__group select{
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    padding-block: 5px;
+    color: var(--text-dark);
+    font-size: .9rem;
+    outline: none;
+    border: none;
+}
+
+.select__group select::placeholder{
+    color: var(--text-dark);
+}
+
+
+
+
+@media (width >768px) {
+    nav {
+        padding: 2rem 1rem;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav__bar {
+        padding: 0;
+        background-color: transparent;
+    }
+
+.nav__menu__btn{
+    display: none;
+}
+
+.nav__links{
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+.nav__btn{
+    display: block;
+}
+
+.nav__links a::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--primary-color);
+    transition: .3s;
+    transform-origin: left;
+
+}
+
+.nav__links a:hover::after{
+    width: 100%;
+}
+
+
 }
