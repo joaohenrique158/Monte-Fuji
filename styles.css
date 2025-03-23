@@ -236,10 +236,20 @@ nav {
 }
 
 .select__group select::placeholder{
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
+.about__container{
+    overflow: hidden;
+    display: grid;
+    gap: 2rem;
+}
 
+.about__image img{
+    max-width: 550px;
+    margin: auto;
+    border-radius: 5px;
+}
 
 
 @media (width >768px) {
@@ -289,6 +299,12 @@ nav {
 .nav__links a:hover::after{
     width: 100%;
 }
+
+.about__container{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
 
 
 }
