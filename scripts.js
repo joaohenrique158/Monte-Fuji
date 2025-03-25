@@ -61,3 +61,10 @@ ScrollReveal().reveal(".house__card",{
     ...scrollRevealOption,
     interval:500,
 })
+
+// service container
+ScrollReveal().reveal(".service__list li",{
+    ...scrollRevealOption,
+    interval:500,
+    origin:"right",
+})
