@@ -55,3 +55,9 @@ ScrollReveal().reveal(".about__btn",{
     ...scrollRevealOption,
     delay: 2000,
 });
+
+// house container
+ScrollReveal().reveal(".house__card",{
+    ...scrollRevealOption,
+    interval:500,
+})
