@@ -109,7 +109,7 @@ body {
 }
 
 nav {
-    position: fixed;
+    position:fixed;
     isolation: isolate;
     top: 0;
     width: 100%;
@@ -422,11 +422,128 @@ color: var(--text-light);
     color: var(--text-light);
 }
 
+.explore :is(.section__subheader, .section__header){
+    text-align: center;
+    margin-inline: auto;
+}
+
+.explore__bg{
+    margin-top: 4rem;
+    padding-block: 3rem;
+    display: grid;
+    grid-template-columns: 
+    minmax(1rem, 1fr)
+    minmax(0, var(--max-width))
+    minmax(1rem, 1fr);
+    background-image: url(img/Logo\ interno\ 3.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.explore__content{
+    grid-column: 2/3;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.explore__content p{
+    margin-bottom: .5rem;
+}
+
+.explore__content h4{
+    margin-bottom: 1rem;
+    font-size: 1,2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: var(--text-dark);
+}
+
+.explore__content .btn{
+    color: var(--primary-color);
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+.explore__content .btn:hover{
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.footer{
+    background-color: var(--text-dark);
+}
+
+.footer__container{
+    display: grid;
+    gap: 4rem 2rem;
+}
+
+.footer__col .section__description{
+    margin-bottom: 2rem;
+}
+
+.footer__col h4{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.footer__links{
+    list-style: none;
+    gap: grid;
+    gap: 1rem;
+}
+
+.footer__links a{
+    color: var(--text-light);
+    transition: .3s;
+}
+
+.footer__links a:hover{
+    color: var(--white);
+}
+
+.footer__socials{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer__socials img{
+    max-width: 25px;
+    opacity: .8;
+    transition: .3s;
+}
+
+.footer__socials img:hover{
+    opacity: 1;
+}
+
+.footer__bar{
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+
 
 @media (width > 576px) {
     .house__grid{
         grid-template-columns: repeat(2, 1fr);
     }
+
+.footer__container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
 }
 
 @media (width > 768px) {
@@ -490,6 +607,9 @@ color: var(--text-light);
     grid-column: 2/3;
 }
 
+.footer__container{
+    grid-template-columns: repeat(4, 1fr);
+}
 
 }
 @media (width > 1024px){
